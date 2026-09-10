@@ -26,30 +26,57 @@ In this project, I conduct an end-to-end empirical audit of $41,188$ telemarketi
 
 The analysis investigates four core tensions between behavioral economics and neoclassical financial theory, proving where predictive correlations hold up under counterfactual scrutiny—and where they catastrophically collapse.
 
-```text
-  ┌─────────────────────────────────────────┐         ┌─────────────────────────────────────────┐
-  │      PREDICTIVE MACHINE LEARNING        │         │      STRUCTURAL CAUSAL INFERENCE        │
-  ├─────────────────────────────────────────┤         ├─────────────────────────────────────────┤
-  │ • Bagging: Random Forest (300 Trees)    │         │ • Directed Acyclic Graphs (DAGs)        │
-  │ • Boosting: HistGradientBoosting (300)  │         │ • Inverse Probability Weighting (IPTW)  │
-  │ • Metric: PR-AUC (Rare Positive Focus)  │   ───▶  │ • Backdoor Covariate Sets (Z: 48-51 vars)│
-  │ • Harmonized OOS Permutation Drop (AUC) │         │ • Cluster-Robust WLS (375 Macro Blocks) │
-  │ • Non-Parametric Marginals (PDP / ICE)  │         │ • Treatment Permutation Placebos        │
-  │ • Isotonic Risk Calibration (0.0737)    │         │ • Negative Control Outcomes & E-Values  │
-  └─────────────────────────────────────────┘         └─────────────────────────────────────────┘
-## Key Empirical Findings & Cross-Question Synthesis
-
-| Dimension | Q1: Contact Cadence (Reactance vs. Mere-Exposure)[cite: 1] | Q2: Past Outreach (Reinforcement vs. Fatigue)[cite: 1] | Q3: Active Debt (Mental Accounting vs. Liquidity)[cite: 1] | Q4: Macro Sentiment (Animal Spirits vs. Fundamentals)[cite: 1] |
-|:---|:---|:---|:---|:---|
-| **Competing Theories** | Psychological Reactance (Brehm) vs. Mere-Exposure (Zajonc)[cite: 1] | Reinforcement / Availability vs. Habituated Refusal[cite: 1] | Debt Aversion (Prelec-Loewenstein) vs. Cash-Flow Constraints[cite: 1] | "Animal Spirits" (Akerlof-Shiller) vs. Rational Neoclassical Rates[cite: 1] |
-| **Predictive ML Behavior** | Strictly monotonic negative slope across PDP/ICE grids in both models[cite: 1]. | `poutcome_success` dominates top split tiers across RF and GB[cite: 1]. | Near-zero permutation importance ($\Delta\text{AUC} \le 0.0003$); flat PDPs[cite: 1]. | Moderate out-of-sample perm importance ($\text{GB }\Delta\text{AUC} = +0.0063$, $\sim 4.8\times \text{Std}$)[cite: 1]. |
-| **Causal Identification Design** | IPTW backdoor conditioning; threshold-step audit ($\ge 3, \ge 4, \ge 5$)[cite: 1]. | Natural conditional stratification on historical outcome states[cite: 1]. | IPTW conditioning on 48 backdoor capacity, demographic, and macro covariates[cite: 1]. | Backdoor IPTW on fundamentals + WLS with Cluster-Robust SEs across 375 macro blocks[cite: 1]. |
-| **Estimated Causal Effect ($\text{ATE}$)** | **$-1.82\text{ pp}$** at $\ge 4$ calls ($p = 3.4 \times 10^{-9}$); **$-3.16\text{ pp}$** at $\ge 5$ calls[cite: 1]. | **$+56.3\text{ pp}$** raw surge for prior success ($65.1\%$ vs. $8.8\%$ cold baseline)[cite: 1]. | **$-0.30\text{ pp}$** ($p = 0.3402$, $95\%\text{ CI } [-0.90\text{ pp}, +0.31\text{ pp}]$)[cite: 1]. | **$+2.51\text{ pp}$** ($p = 0.1413$, $95\%\text{ CI } [-0.83\text{ pp}, +5.85\text{ pp}]$)[cite: 1]. |
-| **Falsification Status** | Placebo refutation passed ($p > 0.50$, effect collapsed to zero)[cite: 1]. | Triangulated across parametric and non-parametric sub-cohort checks[cite: 1]. | Placebo refutation passed ($+0.11\text{ pp}$, $p = 0.7382$)[cite: 1]. | Cluster placebo passed ($p = 0.2622$); Predetermined `age` control passed ($p = 0.3059$)[cite: 1]. |
-| **Final Decision Verdict** | **Confirmed Causal Law:** Causal harm begins abruptly at call #4[cite: 1]. | **Strong Empirical Regularity:** Dominant carryover; rejections remain viable ($14.2\%$)[cite: 1]. | **Empirically Refuted:** Active debt exerts zero drag on term deposit adoption[cite: 1]. | **Empirically Refuted:** Sentiment carries zero independent causal power net of fundamentals[cite: 1]. |
+<table>
+  <thead>
+    <tr>
+      <th width="48%" align="left">🔮 <b>PREDICTIVE MACHINE LEARNING</b></th>
+      <th width="4%" align="center"></th>
+      <th width="48%" align="left">⚖️ <b>STRUCTURAL CAUSAL INFERENCE</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td valign="top">
+        <ul>
+          <li><b>Bagging Architecture:</b> Random Forest (300 Trees)</li>
+          <li><b>Boosting Relay:</b> HistGradientBoosting (300 Iterations)</li>
+          <li><b>Discriminatory Metric:</b> PR-AUC (Rare-Event Minority Focus)</li>
+          <li><b>Attribution Benchmark:</b> Harmonized OOS Permutation Drop ($\Delta\text{AUC}$)</li>
+          <li><b>Response Topography:</b> Non-Parametric Marginals (PDP / Centered-ICE)</li>
+          <li><b>Uncertainty Calibration:</b> Isotonic Probability Realignment ($0.0737$)</li>
+        </ul>
+      </td>
+      <td align="center" valign="middle">
+        <b>───▶</b>
+      </td>
+      <td valign="top">
+        <ul>
+          <li><b>Identification Architecture:</b> Directed Acyclic Graphs (DAGs)</li>
+          <li><b>Weighting Pipeline:</b> Inverse Probability Weighting (IPTW)</li>
+          <li><b>Backdoor Conditioning:</b> Empirical Covariate Sets ($Z$: 48–51 variables)</li>
+          <li><b>Variance Correction:</b> Cluster-Robust WLS (375 Macroeconomic Blocks)</li>
+          <li><b>Placebo Falsification:</b> Treatment-Permutation Null Refutations</li>
+          <li><b>Sensitivity Diagnostics:</b> Predetermined Negative Controls & E-Values</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
+## Key Empirical Findings & Cross-Question Synthesis
+
+| Evaluation Dimension | Q1: Contact Cadence<br>*(Reactance vs. Mere-Exposure)*[cite: 1] | Q2: Past Outreach<br>*(Reinforcement vs. Fatigue)*[cite: 1] | Q3: Active Debt<br>*(Mental Accounting vs. Liquidity)*[cite: 1] | Q4: Macro Sentiment<br>*(Animal Spirits vs. Fundamentals)*[cite: 1] |
+|:---|:---|:---|:---|:---|
+| **Competing Behavioral Hypotheses** | **Psychological Reactance (Brehm)**<br>vs. Mere-Exposure (Zajonc)[cite: 1] | **Reinforcement & Habituation**<br>vs. Habituated Refusal[cite: 1] | **Debt Aversion & Mental Accounting**<br>vs. Cash-Flow Constraints[cite: 1] | **"Animal Spirits" (Akerlof & Shiller)**<br>vs. Rational Neoclassical Rates[cite: 1] |
+| **Predictive Ensemble Behavior** | Monotonic negative slope across PDP/ICE grids in both models[cite: 1]. | `poutcome_success` dominates top split tiers across RF and GB[cite: 1]. | Near-zero permutation importance ($\Delta\text{AUC} \le 0.0003$); flat PDP curves[cite: 1]. | Modest OOS permutation importance ($\text{GB }\Delta\text{AUC} = +0.0063$, $\sim 4.8\times \text{Std}$)[cite: 1]. |
+| **Causal Identification Design** | IPTW backdoor conditioning; threshold sensitivity step audit ($\ge 3, \ge 4, \ge 5$)[cite: 1]. | Natural conditional stratification on historic outcome states and recency windows[cite: 1]. | IPTW conditioning on 48 backdoor capacity, demographic, and macro covariates[cite: 1]. | Backdoor IPTW on fundamentals + WLS with Cluster-Robust SEs ($375$ macro blocks)[cite: 1]. |
+| **Estimated Causal Effect ($\text{ATE}$)** | **$-1.82\text{ pp}$** at $\ge 4$ calls ($p = 3.4 \times 10^{-9}$)<br>**$-3.16\text{ pp}$** at $\ge 5$ calls[cite: 1] | **$+56.3\text{ pp}$** raw surge for prior success ($65.1\%$ vs. $8.8\%$ cold baseline)[cite: 1] | **$-0.30\text{ pp}$** ($p = 0.3402$)<br>$95\%\text{ CI } [-0.90\text{ pp}, +0.31\text{ pp}]$[cite: 1] | **$+2.51\text{ pp}$** ($p = 0.1413$)<br>$95\%\text{ CI } [-0.83\text{ pp}, +5.85\text{ pp}]$[cite: 1] |
+| **Falsification & Placebo Status** | Placebo refutation passed<br>($p > 0.50$, effect collapsed to zero)[cite: 1]. | Triangulated across parametric and non-parametric sub-cohort checks[cite: 1]. | Placebo refutation passed<br>($+0.11\text{ pp}$, $p = 0.7382$, statistically zero)[cite: 1]. | Episode placebo passed ($p = 0.2622$); Predetermined `age` control passed ($p = 0.3059$)[cite: 1]. |
+| **Final Decision Verdict** | 🚨 **Confirmed Causal Law:**<br>Causal penalty initiates sharply at contact attempt #4[cite: 1]. | 📈 **Strong Empirical Regularity:**<br>Dominant carryover; past rejections remain viable ($14.2\%$)[cite: 1]. | ⚖️ **Empirically Refuted:**<br>Active debt exerts zero drag on term deposit adoption[cite: 1]. | 📉 **Empirically Refuted:**<br>Consumer sentiment carries zero independent causal power[cite: 1]. |
+
+---
 ## Integrated Strategic CRM Blueprint
 
 ```text
