@@ -6,6 +6,7 @@
 **Joshua Immanuel**  
 *Decision Science • Causal Machine Learning • Applied Micro-Econometrics • Behavioural Economics*
 
+[![DOI](https://zenodo.org/badge/1364544005.svg)](https://doi.org/10.5281/zenodo.22697970)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=flat-square&logo=python&logoColor=white)](#)
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-Ensemble%20Pipelines-F7931E.svg?style=flat-square&logo=scikit-learn&logoColor=white)](#)
 [![Econometrics](https://img.shields.io/badge/Econometrics-IPTW%20%7C%20Cluster--Robust%20WLS-8A2BE2.svg?style=flat-square)](#)
