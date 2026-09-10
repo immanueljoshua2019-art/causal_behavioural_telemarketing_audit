@@ -187,9 +187,11 @@ If this causal identification design, threshold audit, or pseudo-replication met
   author       = {Immanuel, Joshua},
   title        = {A Behavioral-Economics Read of Bank Marketing: Bridging Predictive Ensembles and Structural Causal Identification},
   year         = {2026},
-  publisher    = {GitHub},
-  journal      = {GitHub repository},
-  howpublished = {\url{https://github.com/immanueljoshua2019-art/causal_behavioural_telemarketing_audit}}
+  publisher    = {Zenodo},
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.22697970},
+  url          = {[https://doi.org/10.5281/zenodo.22697970](https://doi.org/10.5281/zenodo.22697970)},
+  howpublished = {\url{[https://github.com/immanueljoshua2019-art/causal_behavioural_telemarketing_audit](https://github.com/immanueljoshua2019-art/causal_behavioural_telemarketing_audit)}}
 }
 ```
 
