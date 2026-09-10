@@ -163,13 +163,17 @@ jupyter nbconvert --to notebook --execute causal_behavioural_telemarketing_audit
 
 ---
 
-## Methodological Integrity & AI Collaboration Disclosure
+## Research Toolchain & Workflow Note
 
-In keeping with modern scientific best practices, I disclose my workflow toolchain:
+Modern AI tools function as powerful execution accelerators—handling repetitive syntax, automating diagnostic routines, and speeding up pipeline development. 
 
-> "I leverage generative AI models as a technical compiler, boilerplate syntax accelerator, and diagnostic sounding board.
-> 
-> However, the methodological architecture—identifying target leakage in call duration[cite: 1], resolving the metric mismatch between MDI and Permutation Importance[cite: 1], detecting pseudo-replication across the 375 macroeconomic episodes[cite: 1], specifying the structural DAGs[cite: 1], and diagnosing the Brier score distortion under balanced loss weights—was conceived, directed, and audited entirely by myself as lead researcher."
+However, high-stakes decision systems succeed or fail on foundational engineering and scientific judgment:
+
+* **Formulating the Identification Strategy:** Pitting neoclassical price theory against behavioral mechanisms (e.g., mere-exposure vs. psychological reactance; mental accounting vs. liquidity constraints) to ask questions standard loss functions overlook.
+* **Catching Critical Structural Traps:** Enforcing cluster-robust covariance corrections across 375 macroeconomic episodes when naive models yielded spurious $p$-values ($p = 10^{-12}$), and recognizing when model plateaus reflect data sparsity rather than real-world equilibrium.
+* **Designing for Operational Utility:** Reconciling the trade-off between discriminatory ranking for lead assignment and isotonic calibration for expected-value financial forecasting.
+
+AI accelerated the implementation; the underlying architecture, econometric design, and domain reasoning were driven entirely by human decision science.
 
 ---
 
