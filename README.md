@@ -1,10 +1,10 @@
 <div align="center">
 
-# A Behavioral-Economics Read of Bank Marketing Data
+# A Behavioural-Economics Read of Bank Marketing Data
 ### *Bridging Predictive Machine Learning and Causal Identification with Bagging and Boosting*
 
 **Joshua Immanuel**  
-*Decision Science • Causal Machine Learning • Applied Micro-Econometrics • Behavioral Economics*
+*Decision Science • Causal Machine Learning • Applied Micro-Econometrics • Behavioural Economics*
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=flat-square&logo=python&logoColor=white)](#)
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-Ensemble%20Pipelines-F7931E.svg?style=flat-square&logo=scikit-learn&logoColor=white)](#)
@@ -69,7 +69,7 @@ The analysis investigates four core tensions between behavioral economics and ne
 
 | Evaluation Dimension | Q1: Contact Cadence<br>*(Reactance vs. Mere-Exposure)* | Q2: Past Outreach<br>*(Reinforcement vs. Fatigue)* | Q3: Active Debt<br>*(Mental Accounting vs. Liquidity)* | Q4: Macro Sentiment<br>*(Animal Spirits vs. Fundamentals)* |
 |:---|:---|:---|:---|:---|
-| **Competing Behavioral Hypotheses** | **Psychological Reactance (Brehm)**<br>vs. Mere-Exposure (Zajonc) | **Reinforcement & Habituation**<br>vs. Habituated Refusal | **Debt Aversion & Mental Accounting**<br>vs. Cash-Flow Constraints | **"Animal Spirits" (Akerlof & Shiller)**<br>vs. Rational Neoclassical Rates |
+| **Competing Behavioural Hypotheses** | **Psychological Reactance (Brehm)**<br>vs. Mere-Exposure (Zajonc) | **Reinforcement & Habituation**<br>vs. Habituated Refusal | **Debt Aversion & Mental Accounting**<br>vs. Cash-Flow Constraints | **"Animal Spirits" (Akerlof & Shiller)**<br>vs. Rational Neoclassical Rates |
 | **Predictive Ensemble Behavior** | Monotonic negative slope across PDP/ICE grids in both models. | `poutcome_success` dominates top split tiers across RF and GB. | Near-zero permutation importance ($\Delta\text{AUC} \le 0.0003$); flat PDP curves. | Modest OOS permutation importance ($\text{GB }\Delta\text{AUC} = +0.0063$, $\sim 4.8\times \text{Std}$). |
 | **Causal Identification Design** | IPTW backdoor conditioning; threshold sensitivity step audit ($\ge 3, \ge 4, \ge 5$). | Natural conditional stratification on historic outcome states and recency windows. | IPTW conditioning on 48 backdoor capacity, demographic, and macro covariates. | Backdoor IPTW on fundamentals + WLS with Cluster-Robust SEs ($375$ macro blocks). |
 | **Estimated Causal Effect ($\text{ATE}$)** | **$-1.82\text{ pp}$** at $\ge 4$ calls ($p = 3.4 \times 10^{-9}$)<br>**$-3.16\text{ pp}$** at $\ge 5$ calls | **$+56.3\text{ pp}$** raw surge for prior success ($65.1\%$ vs. $8.8\%$ cold baseline) | **$-0.30\text{ pp}$** ($p = 0.3402$)<br>$95\%\text{ CI } [-0.90\text{ pp}, +0.31\text{ pp}]$ | **$+2.51\text{ pp}$** ($p = 0.1413$)<br>$95\%\text{ CI } [-0.83\text{ pp}, +5.85\text{ pp}]$ |
@@ -163,17 +163,17 @@ jupyter nbconvert --to notebook --execute causal_behavioural_telemarketing_audit
 
 ---
 
-## Research Toolchain & Workflow Note
+## Research Toolchain & Engineering Ownership
 
-Modern AI tools function as powerful execution accelerators—handling repetitive syntax, automating diagnostic routines, and speeding up pipeline development. 
+I treat modern AI tools as an execution accelerator—handling repetitive syntax, automating diagnostic plotting routines, and speeding up pipeline development. 
 
-However, high-stakes decision systems succeed or fail on foundational engineering and scientific judgment:
+However, every structural decision and core analytical breakthrough in this project was conceived, designed, and verified directly by me:
 
-* **Formulating the Identification Strategy:** Pitting neoclassical price theory against behavioral mechanisms (e.g., mere-exposure vs. psychological reactance; mental accounting vs. liquidity constraints) to ask questions standard loss functions overlook.
-* **Catching Critical Structural Traps:** Enforcing cluster-robust covariance corrections across 375 macroeconomic episodes when naive models yielded spurious $p$-values ($p = 10^{-12}$), and recognizing when model plateaus reflect data sparsity rather than real-world equilibrium.
-* **Designing for Operational Utility:** Reconciling the trade-off between discriminatory ranking for lead assignment and isotonic calibration for expected-value financial forecasting.
+* **Formulating the Identification Strategy:** I established the causal frameworks pitting neoclassical price theory against behavioural mechanisms (mere-exposure vs. psychological reactance; mental accounting vs. liquidity constraints) to ask questions standard loss functions overlook.
+* **Catching Critical Structural Traps:** I identified the macro pseudo-replication and enforced cluster-robust covariance corrections across the 375 macroeconomic episodes when naive regressions returned spurious $p$-values ($p = 10^{-12}$), and determined where model plateaus represented data sparsity rather than real-world equilibrium.
+* **Designing for Operational Utility:** I resolved the optimization trade-off between discriminatory ranking for operational lead assignment and isotonic probability calibration for expected-value balance-sheet forecasting.
 
-AI accelerated the implementation; the underlying architecture, econometric design, and domain reasoning were driven entirely by human decision science.
+AI accelerated the code syntax; the causal architecture, econometric specifications, and domain conclusions are entirely my own work.
 
 ---
 
@@ -196,5 +196,5 @@ If this causal identification design, threshold audit, or pseudo-replication met
 
 
 
-**Lead Researcher & Author:** **Joshua Immanuel**[cite: 1]  
-*Decision Science • Causal Machine Learning • Applied Micro-Econometrics • Behavioral Economics*[cite: 1]
+**Lead Researcher & Author:** **Joshua Immanuel**  
+*Decision Science • Causal Machine Learning • Applied Micro-Econometrics • Behavioural Economics*
