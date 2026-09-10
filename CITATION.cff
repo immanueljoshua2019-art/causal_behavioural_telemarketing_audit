@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "A Behavioural-Economics Read of Bank Marketing Data: Bridging Predictive Machine Learning and Causal Identification with Bagging and Boosting"
+authors:
+  - family-names: Immanuel
+    given-names: Joshua
+    alias: immanueljoshua2019-art
+version: 1.0.0
+date-released: 2026-09-10
+doi: 10.5281/zenodo.22697970
+url: "https://github.com/immanueljoshua2019-art/causal_behavioural_telemarketing_audit"
+license: MIT
+repository-code: "https://github.com/immanueljoshua2019-art/causal_behavioural_telemarketing_audit"
+keywords:
+  - causal inference
+  - machine learning
+  - behavioural economics
+  - decision science
+  - econometrics
+
+Add citation metadata
