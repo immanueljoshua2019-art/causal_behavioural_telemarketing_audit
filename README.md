@@ -1,18 +1,20 @@
+<div align="center">
+
 # A Behavioral-Economics Read of Bank Marketing Data
-### *Bridging Predictive Machine Learning and Causal Identification with Bagging and Boosting*[cite: 1]
+### *Bridging Predictive Machine Learning and Causal Identification with Bagging and Boosting*
 
-**Joshua Immanuel**[cite: 1]  
-*Decision Science • Causal Machine Learning • Applied Micro-Econometrics • Behavioral Economics*[cite: 1]
+**Joshua Immanuel**  
+*Decision Science • Causal Machine Learning • Applied Micro-Econometrics • Behavioral Economics*
 
-[](#)
-[](#)
-[](#)
-[](LICENSE)
-[](#)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg?style=flat-square&logo=python&logoColor=white)](#)
+[![Scikit-Learn](https://img.shields.io/badge/scikit--learn-Ensemble%20Pipelines-F7931E.svg?style=flat-square&logo=scikit-learn&logoColor=white)](#)
+[![Econometrics](https://img.shields.io/badge/Econometrics-IPTW%20%7C%20Cluster--Robust%20WLS-8A2BE2.svg?style=flat-square)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Completed%20Research-success.svg?style=flat-square)](#)
 
 ---
 
-
+</div>
 
 ## Executive Abstract
 
@@ -20,9 +22,9 @@ In direct marketing and algorithmic decision systems, teams routinely commit a f
 
 When an ensemble tree model flags contact frequency or macroeconomic sentiment as a high-leverage feature, standard business intelligence assumes that altering those inputs will mechanically improve conversion. In reality, observational customer logs are heavily confounded by targeting heuristics, unobserved client intent, and temporal clustering.
 
-In this project, I conduct an end-to-end empirical audit of $41,188$ telemarketing contacts from the UCI Bank Marketing dataset[cite: 1]. I pit non-parametric predictive ensembles (**Random Forest** and **HistGradientBoosting**) against formal structural econometrics (**Pearl’s Backdoor Criterion**, **Inverse Probability of Treatment Weighting [IPTW]**, **Cluster-Robust Covariance Corrections**, and **Falsification Placebos**)[cite: 1].
+In this project, I conduct an end-to-end empirical audit of $41,188$ telemarketing contacts from the UCI Bank Marketing dataset. I pit non-parametric predictive ensembles (**Random Forest** and **HistGradientBoosting**) against formal structural econometrics (**Pearl’s Backdoor Criterion**, **Inverse Probability of Treatment Weighting [IPTW]**, **Cluster-Robust Covariance Corrections**, and **Falsification Placebos**).
 
-The analysis investigates four core tensions between behavioral economics and neoclassical financial theory, proving where predictive correlations hold up under counterfactual scrutiny—and where they catastrophically collapse[cite: 1].
+The analysis investigates four core tensions between behavioral economics and neoclassical financial theory, proving where predictive correlations hold up under counterfactual scrutiny—and where they catastrophically collapse.
 
 ```text
   ┌─────────────────────────────────────────┐         ┌─────────────────────────────────────────┐
@@ -35,10 +37,6 @@ The analysis investigates four core tensions between behavioral economics and ne
   │ • Non-Parametric Marginals (PDP / ICE)  │         │ • Treatment Permutation Placebos        │
   │ • Isotonic Risk Calibration (0.0737)    │         │ • Negative Control Outcomes & E-Values  │
   └─────────────────────────────────────────┘         └─────────────────────────────────────────┘
-```
-
----
-
 ## Key Empirical Findings & Cross-Question Synthesis
 
 | Dimension | Q1: Contact Cadence (Reactance vs. Mere-Exposure)[cite: 1] | Q2: Past Outreach (Reinforcement vs. Fatigue)[cite: 1] | Q3: Active Debt (Mental Accounting vs. Liquidity)[cite: 1] | Q4: Macro Sentiment (Animal Spirits vs. Fundamentals)[cite: 1] |
