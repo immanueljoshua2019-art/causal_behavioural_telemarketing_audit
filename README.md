@@ -1,10 +1,10 @@
 <div align="center">
 
-# A Behavioral-Economics Read of Bank Marketing Data
+# A Behavioural-Economics Read of Bank Marketing Data
 ### *Bridging Predictive Machine Learning and Causal Identification with Bagging and Boosting*
 
 **Author:** **Joshua Immanuel**  
-*Decision Science • Causal Machine Learning • Applied Micro-Econometrics*
+*Decision Science • Causal Machine Learning • Applied Micro-Econometrics • Behavioural economics*
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python&logoColor=white)](#)
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-Ensemble%20Pipelines-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)](#)
